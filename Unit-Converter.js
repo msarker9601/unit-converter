@@ -129,6 +129,14 @@ function displayInches() {
 		outputInches.innerHTML = inches + " Inch ";
 }
 
+function feetAdd() {
+	feet++;
+	displayFeet();
+}
+function feetSubtract() {
+	feet--;
+	displayFeet();
+}
 function distanceConvert() {
 	/*Within this function will be the code for distance conversion. I will start off with inches. Within this command, I will have to use an if statement that makes it such that it doesn’t go to negative. */
 	//Add conversion of feet, yards, and miles
@@ -136,22 +144,19 @@ function distanceConvert() {
 	feet = Math.round(feet * 100) / 100;
 	yards = feet / 3;
 	yards = Math.round(yards * 1000) / 1000;
-	displayDistanceConvert();
-}
-function feetAdd() {
-	feet++;
 	displayFeet();
+	displayYard();
 }
-
 function displayFeet() {
 	outputFeet.innerHTML = feet + " Feet ";
 	if (feet == 1)
 		outputFeet.innerHTML = feet + " Foot ";
+}
+function displayYard() {
 	outputYards.innerHTML = yards + " Yards ";
 	if (yards == 1)
 		outputYards.innerHTML = yards + " Yard ";
 }
-
 function secondsAdd() {
 	//If you press the add button for the time display section, then you will add to the time
 	seconds++;
