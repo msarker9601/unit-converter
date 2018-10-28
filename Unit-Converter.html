@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title> Unit Converter </title>
+	<link rel="stylesheet" type="text/css" href="Unit-Converter.css">
+	<script src="Unit-Converter.js">
+	</script>
+</head>
+
+<body onload="initialize();">
+	<h1> Unit Converter by Muhaimin Sarker </h1>
+	<h3> Temperature Converter</h3>
+	<span id="degreesFahrenheit">0 Fahrenheit </span>
+	<button id="fahrenheitAdd" onclick="fahrenheitAdd(); temperatureConvert();"> + </button>
+	<button id="fahrenheitSubtract" onclick="fahrenheitSubtract(); temperatureConvert();"> - </button>
+	<button id="fahrenheitSwitch" onclick="buttonDisappear();"> Switch! </button>
+	<br /> <br/>
+	<span id="degreesCelsius">0 Celsius</span>
+	<button class="hidden-button" id="celsiusAdd" onclick="celsiusAdd(); celsiusConvert();"> + </button>
+	<button class="hidden-button" id="celsiusSubtract" onclick="celsiusSubtract(); celsiusConvert();"> - </button>
+	<button class="hidden-button" id="celsiusSwitch" onclick="buttonAppear();"> Switch! </button>
+	<h3> Distance Converter</h3>
+	<span id="Inches">0 Inches</span>
+	<button onclick="inchesAdd(); distanceConvert();"> + </button>
+	<button onclick="inchesSubtract(); distanceConvert();"> - </button>
+	<p id="Feet">Feet</p>
+	<p id="Yards">Yards</p>
+	<h3> Time Converter</h3>
+	<span id="Seconds">0 Seconds</span>
+	<button onclick="secondsAdd(); timeConvert();"> + </button>
+	<button onclick="secondsSubtract(); timeConvert();"> - </button>
+	<p id="Minutes">Minutes</p>
+	<p id="Hours">Hours</p>
+	<h3> Mass Converter</h3>
+	<span id="Grams">0 Grams </span>
+	<button onclick="gramsAdd(); massConvert();"> + </button>
+	<button onclick="gramsSubtract(); massConvert();"> - </button>
+	<p id="Kilograms">Kilograms</p>
+	<p id="Pounds">Pounds </p>
+</body>
+</html>
