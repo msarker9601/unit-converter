@@ -97,7 +97,7 @@ function celsiusSubtract() {
 }
 function celsiusConvert() {
 	/*Within this function will be the code for temperature conversion I have decided that I will start off with celsius. Use the formula F= 9/5F-32. */
-	fahrenheit = 9 / 5 * (celsius - 32);
+	fahrenheit = (9 / 5 * celsius) + 32;
 	fahrenheit = Math.round(fahrenheit * 100) / 100;
 	displayFahrenheit();
 }
@@ -119,7 +119,7 @@ function inchesSubtract() {
 	//If you press the subtract button for the time display section, then you will subtract to the inches
 	inches--;
 	if (inches < 1)
-		inches = 1;
+		inches = 0;
 	displayInches();
 }
 function displayInches() {
@@ -127,15 +127,6 @@ function displayInches() {
 	outputInches.innerHTML = inches + " Inches ";
 	if (inches == 1)
 		outputInches.innerHTML = inches + " Inch ";
-}
-
-function feetAdd() {
-	feet++;
-	displayFeet();
-}
-function feetSubtract() {
-	feet--;
-	displayFeet();
 }
 function distanceConvert() {
 	/*Within this function will be the code for distance conversion. I will start off with inches. Within this command, I will have to use an if statement that makes it such that it doesn’t go to negative. */
@@ -147,16 +138,55 @@ function distanceConvert() {
 	displayFeet();
 	displayYard();
 }
+
+function feetAdd() {
+	feet++;
+	displayFeet();
+}
+function feetSubtract() {
+	feet--;
+	if (feet < 1)
+		feet = 0;
+	displayFeet();
+}
 function displayFeet() {
 	outputFeet.innerHTML = feet + " Feet ";
 	if (feet == 1)
 		outputFeet.innerHTML = feet + " Foot ";
+}
+function distanceConvert2() {
+	yards = feet / 3;
+	yards = Math.round(yards * 1000) / 1000;
+	inches = feet * 12;
+	inches = Math.round(inches * 100) / 100;
+	displayInches();
+	displayYard();
+}
+function yardsAdd() {
+	yards++;
+	displayYard();
+}
+function yardsSubtract() {
+	yards--;
+	if (yards < 1)
+		yards = 0;
+	displayYard();
 }
 function displayYard() {
 	outputYards.innerHTML = yards + " Yards ";
 	if (yards == 1)
 		outputYards.innerHTML = yards + " Yard ";
 }
+
+function distanceConvert3() {
+	feet = yards*3;
+	feet = Math.round(feet * 100) / 100;
+	inches = yards * 36;
+	inches = Math.round(inches * 100) / 100
+	displayInches();
+	displayFeet();
+}
+
 function secondsAdd() {
 	//If you press the add button for the time display section, then you will add to the time
 	seconds++;
