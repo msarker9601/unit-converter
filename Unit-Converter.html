@@ -22,26 +22,41 @@
 	<button class="hidden-button" id="celsiusSwitch" onclick="buttonAppear();"> Switch! </button>
 	<h3> Distance Converter</h3>
 	<span id="Inches">0 Inches</span>
-	<button onclick="inchesAdd(); distanceConvert();"> + </button>
+	<button onclick="inchesAdd(); distanceConvert(); distanceAppear();"> + </button>
 	<button onclick="inchesSubtract(); distanceConvert();"> - </button>
-	<p id="Feet">Feet</p>
-	<button onclick="feetAdd(); distanceConvert2();"> + </button>
-	<button onclick="feetSubtract(); distanceConvert2();"> - </button>
-	<p id="Yards">Yards</p>
-	<button onclick="yardsAdd(); distanceConvert3();"> + </button>
-	<button onclick="yardsSubtract(); distanceConvert3();"> - </button>
+	<br /> <br />
+	<span id="Feet">0 Feet</span>
+	<button id="feetAdd" class="hidden-button" onclick="feetAdd(); distanceConvert2();"> + </button>
+	<button id="feetSubtract" class="hidden-button" onclick="feetSubtract(); distanceConvert2();"> - </button>
+	<br /> <br />
+	<span id="Yards">0 Yards</span>
+	<button id="yardAdd" class="hidden-button" onclick="yardsAdd(); distanceConvert3();"> + </button>
+	<button id="yardSubtract" class="hidden-button" onclick="yardsSubtract(); distanceConvert3();"> - </button>
 	<h3> Time Converter</h3>
 	<span id="Seconds">0 Seconds</span>
-	<button onclick="secondsAdd(); timeConvert();"> + </button>
+	<button onclick="secondsAdd(); timeConvert(); timeAppear();"> + </button>
 	<button onclick="secondsSubtract(); timeConvert();"> - </button>
-	<p id="Minutes">Minutes</p>
-	<p id="Hours">Hours</p>
+	<br /> <br />
+	<span id="Minutes">0 Minutes</span>
+	<button id="minutesAdd" class="hidden-button" onclick="minutesAdd(); timeConvert2();"> + </button>
+	<button id="minutesSubtract" class="hidden-button" onclick="minutesSubtract(); timeConvert2();"> - </button>
+	<br /> <br />
+	<span id="Hours">0 Hours</span>
+	<button id="hoursAdd" class="hidden-button" onclick="hoursAdd(); timeConvert3();"> + </button>
+	<button id="hoursSubtract" class="hidden-button" onclick="hoursSubtract(); timeConvert3();"> - </button>
 	<h3> Mass Converter</h3>
 	<span id="Grams">0 Grams </span>
-	<button onclick="gramsAdd(); massConvert();"> + </button>
+	<button onclick="gramsAdd(); massConvert(); massAppear();"> + </button>
 	<button onclick="gramsSubtract(); massConvert();"> - </button>
-	<p id="Kilograms">Kilograms</p>
-	<p id="Pounds">Pounds </p>
+	<br /> <br />
+	<span id="Kilograms">0 Kilograms</span>
+	<button class="hidden-button" id="kilogramAdd" onclick="kilogramAdd(); massConvert2();"> + </button>
+	<button class="hidden-button" id="kilogramSubtract" onclick="kilogramSubtract(); massConvert2();"> - </button>
+	<br /> <br />
+	<span id="Pounds">0 Pounds </span>
+	<button class="hidden-button" id="poundsAdd" onclick="poundAdd(); massConvert3();"> + </button>
+	<button class="hidden-button" id="poundsAdd" onclick="poundSubtract(); massConvert3();"> - </button>
+	<br /> <br />
 </body>
 
 </html>
